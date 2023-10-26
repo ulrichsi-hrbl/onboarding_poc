@@ -12,7 +12,6 @@ class AnimationPage extends StatefulWidget {
 
 class _AnimationPageState extends State<AnimationPage>
     with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(vsync: this);
 
   @override
   Widget build(BuildContext context) {

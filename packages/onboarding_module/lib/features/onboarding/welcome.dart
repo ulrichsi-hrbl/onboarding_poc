@@ -28,7 +28,7 @@ class Welcome extends ConsumerWidget {
       return;
     }
     pageController.animateToPage(currentPosition + 1,
-        duration: Duration(milliseconds: 300), curve: Curves.ease);
+        duration: const Duration(milliseconds: 300), curve: Curves.ease);
   }
 
   @override

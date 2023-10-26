@@ -10,13 +10,12 @@ class AnimationPageOne extends StatefulWidget {
 
 class _AnimationPageOneState extends State<AnimationPageOne>
     with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(vsync: this);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topCenter,
-      child: AnimationA(),
+      child: const AnimationA(),
     );
   }
 }

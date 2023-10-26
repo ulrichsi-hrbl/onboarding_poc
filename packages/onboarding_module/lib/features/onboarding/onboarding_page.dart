@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:onboarding_module/features/models/onboarding_slides_copy.dart';
 import 'package:onboarding_module/features/onboarding/widgets/animation_page.dart';
 
-import 'widgets/animation_page_one.dart';
-
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage(
       {required this.title,
@@ -29,7 +27,7 @@ class OnboardingPage extends StatelessWidget {
         ),
         Text(
           onboardingCopy[title]!,
-          style: TextStyle(fontSize: 32),
+          style: const TextStyle(fontSize: 32),
         ),
         const SizedBox(
           height: 24,
@@ -39,7 +37,7 @@ class OnboardingPage extends StatelessWidget {
           child: Text(
             onboardingCopy[body]!,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16),
           ),
         ),
       ],
