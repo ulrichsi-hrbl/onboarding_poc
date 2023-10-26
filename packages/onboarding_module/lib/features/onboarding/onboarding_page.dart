@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/features/models/onboarding_slides_copy.dart';
-import 'package:onboarding/features/onboarding/widgets/animation_page.dart';
+import 'package:onboarding_module/features/models/onboarding_slides_copy.dart';
+import 'package:onboarding_module/features/onboarding/widgets/animation_page.dart';
 
 import 'widgets/animation_page_one.dart';
 

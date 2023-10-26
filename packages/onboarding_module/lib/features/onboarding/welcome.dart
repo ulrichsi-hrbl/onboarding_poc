@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:onboarding/features/models/onboarding_slides_copy.dart';
-import 'package:onboarding/features/onboarding/onboarding_page.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+
+import '../models/onboarding_slides_copy.dart';
+import 'onboarding_page.dart';
 
 final currentPageProvider = StateProvider<int>((ref) => 0);
 
@@ -19,7 +20,7 @@ class Welcome extends ConsumerWidget {
       return;
     }
     pageController.animateToPage(currentPosition - 1,
-        duration: Duration(milliseconds: 300), curve: Curves.ease);
+        duration: const Duration(milliseconds: 300), curve: Curves.ease);
   }
 
   void goToNextPage(int currentPosition) {
@@ -40,8 +41,8 @@ class Welcome extends ConsumerWidget {
     print('from provider $currentPosition');
     final decorator = DotsDecorator(
       activeColor: Colors.green[600],
-      size: Size.square(8.0),
-      activeSize: Size(16.0, 8.0),
+      size: const Size.square(8.0),
+      activeSize: const Size(16.0, 8.0),
       activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(4.0),
       ),
@@ -54,7 +55,7 @@ class Welcome extends ConsumerWidget {
           Positioned(
             top: 30,
             left: MediaQuery.of(context).size.width / 2 - 76,
-            child: Image.asset('packages/onboarding/assets/images/onboardingLogo.png'),
+            child: Image.asset('packages/onboarding_module/assets/images/onboardingLogo.png'),
           ),
           PageView(
             controller: pageController,
@@ -66,17 +67,17 @@ class Welcome extends ConsumerWidget {
               OnboardingPage(
                 title: 'browseConsumptions',
                 body: 'browseConsumptionsDescription',
-                asset: 'packages/onboarding/assets/lottie/onboarding-01.json',
+                asset: 'packages/onboarding_module/assets/lottie/onboarding-01.json',
               ),
               OnboardingPage(
                 title: 'buildConnections',
                 body: 'buildConnectionsDescription',
-                asset: 'packages/onboarding/assets/lottie/onboarding-02.json',
+                asset: 'packages/onboarding_module/assets/lottie/onboarding-02.json',
               ),
               OnboardingPage(
                 title: 'checkin',
                 body: 'checkinDescription',
-                asset: 'packages/onboarding/assets/lottie/onboarding-03.json',
+                asset: 'packages/onboarding_module/assets/lottie/onboarding-03.json',
               ),
             ],
           ),
@@ -92,7 +93,7 @@ class Welcome extends ConsumerWidget {
         ]),
         height: 50,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

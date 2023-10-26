@@ -5,6 +5,6 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset('packages/onboarding/assets/images/onboardingLogo.png');
+    return Image.asset('packages/onboarding_module/assets/images/onboardingLogo.png');
   }
 }
