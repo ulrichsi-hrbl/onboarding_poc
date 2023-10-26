@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   onboarding_module:
-    git: https://github.com/ulrichsi-hrbl/onboarding_poc
+    path: packages/onboarding_module
 
 
   # The following adds the Cupertino Icons font to your application.
