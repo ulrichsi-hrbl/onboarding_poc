@@ -23,7 +23,7 @@ class Welcome extends ConsumerWidget {
   }
 
   void goToNextPage(int currentPosition) {
-    if (currentPosition + 1 >= totalDots - 1) {
+    if (currentPosition + 1 > totalDots - 1) {
       return;
     }
     pageController.animateToPage(currentPosition + 1,
@@ -54,7 +54,7 @@ class Welcome extends ConsumerWidget {
           Positioned(
             top: 30,
             left: MediaQuery.of(context).size.width / 2 - 76,
-            child: Image.asset('assets/images/onboardingLogo.png'),
+            child: Image.asset('packages/onboarding/assets/images/onboardingLogo.png'),
           ),
           PageView(
             controller: pageController,
@@ -66,17 +66,17 @@ class Welcome extends ConsumerWidget {
               OnboardingPage(
                 title: 'browseConsumptions',
                 body: 'browseConsumptionsDescription',
-                asset: 'assets/lottie/onboarding-01.json',
+                asset: 'packages/onboarding/assets/lottie/onboarding-01.json',
               ),
               OnboardingPage(
                 title: 'buildConnections',
                 body: 'buildConnectionsDescription',
-                asset: 'assets/lottie/onboarding-02.json',
+                asset: 'packages/onboarding/assets/lottie/onboarding-02.json',
               ),
               OnboardingPage(
                 title: 'checkin',
                 body: 'checkinDescription',
-                asset: 'assets/lottie/onboarding-03.json',
+                asset: 'packages/onboarding/assets/lottie/onboarding-03.json',
               ),
             ],
           ),
