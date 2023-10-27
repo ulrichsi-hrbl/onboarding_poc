@@ -167,8 +167,10 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/onboarding_module"
-      relative: true
-    source: path
+      ref: main
+      resolved-ref: "271028eb4af8abd48f3e6a28beae0d9394ae3d9e"
+      url: "https://github.com/ulrichsi-hrbl/onboarding_poc"
+    source: git
     version: "0.0.1"
   path:
     dependency: transitive
